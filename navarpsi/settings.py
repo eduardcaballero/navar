@@ -108,7 +108,7 @@ DATABASES = {
         'PASSWORD': 'navarpsi',
         'HOST': 'NavarPSI.mysql.pythonanywhere-services.com',
         'TEST': {
-          NAME: 'NavarPSI$test_navar',
+          'NAME': 'NavarPSI$test_navar',
     }
 }
 }
