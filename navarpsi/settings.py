@@ -75,26 +75,40 @@ WSGI_APPLICATION = 'navarpsi.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'NavarPSI',
-#         'PASSWORD' : 'NAVAR2018',
+#         'ENGINE': 'mysql_cymysql',
+#         'NAME': 'navar',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
 #     }
-# }
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'NavarPSI$navarpsi',
+#         'USER': 'NavarPSI',
+#         'PASSWORD': 'NAVAR2018',
+#         'HOST': 'NavarPSI.mysql.pythonanywhere-services.com',
+#         'TEST': {
+#           NAME: 'NavarPSI$test_navarpsi',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'NavarPSI$navarpsi',
+        'ENGINE': 'mysql_cymysql',
+        'NAME': 'NavarPSI$navar',
         'USER': 'NavarPSI',
-        'PASSWORD': 'NAVAR2018',
+        'PASSWORD': 'navarpsi',
         'HOST': 'NavarPSI.mysql.pythonanywhere-services.com',
         'TEST': {
-          NAME: 'NavarPSI$test_navarpsi',
+          NAME: 'NavarPSI$test_navar',
     }
 }
 
