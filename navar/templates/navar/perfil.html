@@ -1,0 +1,13 @@
+{% extends 'navar/base.html' %}
+
+{% block content %}
+    <div>
+        {% if perfil.published_date %}
+            <div>
+                {{ perfil.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ perfil.title }}</h1>
+        <p>{{ perfil.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
