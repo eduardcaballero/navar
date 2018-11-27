@@ -105,7 +105,7 @@ DATABASES = {
         'ENGINE': 'mysql_cymysql',
         'NAME': 'NavarPSI$navar',
         'USER': 'NavarPSI',
-        'PASSWORD': 'navarpsi',
+        'PASSWORD': 'hola.hola.hola',
         'HOST': 'NavarPSI.mysql.pythonanywhere-services.com',
         'TEST': {
           'NAME': 'NavarPSI$test_navar',
