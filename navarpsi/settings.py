@@ -93,6 +93,8 @@ DATABASES = {
         'USER': 'NavarPSI',
         'PASSWORD': 'NAVAR2018',
         'HOST': 'NavarPSI.mysql.pythonanywhere-services.com',
+        'TEST': {
+          NAME: 'NavarPSI$test_navarpsi',
     }
 }
 
