@@ -1,0 +1,17 @@
+{% extends 'navar/base.html' %}
+
+{% block content %}
+    <div>
+        {% if usuario.published_date %}
+            <div>
+                {{ usuario.published_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'usuario_editar' pk=usuario.pk %}"><i class="fas fa-user-edit"></i></i></a>
+            <a class="btn btn-default" href="{% url 'usuario_eliminar' pk=usuario.pk %}"><i class="fas fa-user-minus"></i></a>
+        {% endif %}
+        <h1>{{ usuario.title }}</h1>
+        <p>{{ usuario.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
