@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'navarpsi.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', #app para logearse
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'navarpsi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,6 +100,8 @@ WSGI_APPLICATION = 'navarpsi.wsgi.application'
 #           NAME: 'NavarPSI$test_navarpsi',
 #     }
 # }
+
+# para la base de datos se instalo cymysql y django-cymysql en el servidor
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
@@ -151,4 +153,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-LOGIN_REDIRECT_URL = 'accounts/usuario/'
+LOGIN_REDIRECT_URL = '/home'

@@ -3,7 +3,7 @@
 <html>
 <head>
     <!-- Definiendo el titulo de la pagina -->
-    <title>NavarPSI</title>
+    <title>{% block title %} NavarPSI {% endblock %}</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"  crossorigin="anonymous">
     <!--Import bootstrap.css-->
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}" />
@@ -24,7 +24,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="{% url 'lo' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
                     </li>
                 </ul>
             </div>
