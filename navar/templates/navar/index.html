@@ -1,13 +1,5 @@
 {% extends 'navar/base.html' %}
 {% block title %}NavarPSI{% endblock %}
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            <h1><a href="{% url 'usuario_detalle' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+    <p>Hola</p>
 {% endblock %}

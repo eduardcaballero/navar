@@ -1,0 +1,24 @@
+{% extends 'usuario/menu.html' %}
+{% block title %}Solicitud{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="card text-center border-secondary mt-3 mb-3">
+              <div class="card-header">
+                <h2>Solicitud de Servicio</h2>
+              </div>
+              <div class="card-body">
+                <form name="servicio" method="post">
+                    {% csrf_token %}
+                    {{ crear_servicio.as_p }}
+                  </form>
+                <a href="" form="servicio" class="btn btn-primary">Enviar</a>
+              </div>
+              <div class="card-footer text-muted"></div>
+            </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

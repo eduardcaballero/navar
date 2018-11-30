@@ -18,6 +18,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views
 from django.views.generic.base import TemplateView
+from navar import views as core_views
 
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
 #    url(r'^home/', include('navar.urls')),
    url(r'^home/', TemplateView.as_view(template_name='usuario/home.html'), name='home'),
    url(r'^accounts/', include('django.contrib.auth.urls'),name='login'),
+   url(r'^registrar/$', core_views.create_usuario, name='registrar'),
 #    url(r'^accounts/login/$', views.login, name='login'),
 # path('accounts/', include('django.contrib.auth.urls')),
 ]
